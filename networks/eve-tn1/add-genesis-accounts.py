@@ -77,7 +77,7 @@ def outputDetails() -> str:
 
 def createGenesisAccountsCommands():
     gentx_files = os.listdir(FOLDER)
-    # give validators their amounts in the genesis (1uexp & some craft)
+    # give validators their amounts in the genesis (some WBA token)
     output = "# AUTO GENERATED FROM add-genesis-accounts.py\n"
     for file in gentx_files:
         f = open(FOLDER + "/" + file, 'r')
@@ -85,16 +85,15 @@ def createGenesisAccountsCommands():
 
         validatorData = data['body']['messages'][0]
         moniker = validatorData['description']['moniker']
-        val_addr = validatorData['delegator_address'] # craftxxxxx
+        val_addr = validatorData['delegator_address'] # wbaxxxx
         amt = validatorData['value']['amount']
 
         if val_addr not in CUSTOM_GENESIS_ACCOUNT_VALUES.keys():
             # print()
-            output += f"wbad add-genesis-account {val_addr} {amt}uexp,10000000000ucraft #{moniker}\n"
+            output += f"wbad add-genesis-account {val_addr} 10000000000uwba #{moniker}\n"
             continue # 
                 
-    for account in CUSTOM_GENESIS_ACCOUNT_VALUES:
-        # print(f"craftd add-genesis-account {account} {CUSTOM_GENESIS_ACCOUNT_VALUES[account]}")
+    for account in CUSTOM_GENESIS_ACCOUNT_VALUES:        
         output += f"wbad add-genesis-account {account} {CUSTOM_GENESIS_ACCOUNT_VALUES[account]}\n"
 
     # save output to file in this directory

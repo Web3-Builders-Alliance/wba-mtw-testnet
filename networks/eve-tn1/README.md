@@ -46,7 +46,7 @@ cat ${PROJECT_HOME}/config/gentx/gentx-*.json
 
 # Download the file from $HOME/MONIKER.json & upload to the discord channel
 echo -e "\n\n\nPlease paste the contents above into the discord channel (( ${PROJECT_HOME}/config/gentx/gentx-*.json ))"
-echo -e "     (also remember to backup ~/.craftd/node_key.json && ~/.craftd/priv_validator_key.json)\n"
-echo -e "     Your peer: `echo $(craftd tendermint show-node-id)@$(curl -s ifconfig.me):26656`"
+echo -e "     (also remember to backup ~/.wbad/node_key.json && ~/.wbad/priv_validator_key.json)\n"
+echo -e "     Your peer: `echo $(wbad tendermint show-node-id)@$(curl -s ifconfig.me):26656`"
 # DO NOT SUBMIT A PR FOR THIS, POST IN THE DISCORD `gentx-submit` CHANNEL THANK YOU!
 ```

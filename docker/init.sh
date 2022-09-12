@@ -62,7 +62,6 @@ echo "Setting genesis time to $the_time"
 update_test_genesis '.consensus_params["block"]["max_gas"]="100000000"'
 update_test_genesis `printf '.genesis_time="%s"' $the_time`
 update_test_genesis '.app_state["gov"]["voting_params"]["voting_period"]="15s"'
-# Change chain options to use EXP as the staking denom for craft
 update_test_genesis '.app_state["staking"]["params"]["bond_denom"]="uwba"'
 update_test_genesis '.app_state["staking"]["params"]["min_commission_rate"]="0.100000000000000000"'
 # update from token -> uwba
