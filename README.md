@@ -1,3 +1,9 @@
+# WBA Testnet
+
+## Install
+
+For instructions, see [Install](INSTALL.md)
+
 ## WBA TODO - testnet
 [x] Build a test chain
 [] Execute handshakes for IBC (ts-relayer)
