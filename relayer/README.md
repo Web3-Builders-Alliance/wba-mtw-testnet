@@ -39,6 +39,14 @@ then we need to add the WBA chain to the config file
 
 
 ```bash
+# osmo / wasmd test
+ibc-setup init --src local_wasm --dest local_osmo
+# osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq, same mnumonic is below
+
+# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
+```
+
+```bash
 ibc-setup init --src local_wasm --dest local_wba
 # Saved configuration to /home/reece/.ibc-setup/app.yaml
 # Source address: wasm18ef4ede5mscprrx3270flk9d0w4f2mppw3e6sc
