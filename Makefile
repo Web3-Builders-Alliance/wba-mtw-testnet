@@ -51,8 +51,8 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=eved \
-		  -X github.com/cosmos/cosmos-sdk/version.ServerName=eve \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=wbad \
+		  -X github.com/cosmos/cosmos-sdk/version.ServerName=wba \
 		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 		  -X github.com/cosmos/cosmos-sdk/types.DBBackend=pebbledb \
@@ -72,14 +72,14 @@ BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)'
 all: install
 
 install: go.sum
-		go install $(BUILD_FLAGS) ./eved
+		go install $(BUILD_FLAGS) ./wbad
 
 go.sum: go.mod
 		@echo "--> Ensure dependencies have not been modified"
 		@go mod verify
 
 build:
-	go build $(BUILD_FLAGS) -o ./build/eved ./eved
+	go build $(BUILD_FLAGS) -o ./build/wbad ./wbad
 
 
 # https://github.com/cosmos/ibc-go/blob/main/Makefile#L377

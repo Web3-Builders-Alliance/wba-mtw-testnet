@@ -11,14 +11,14 @@ import (
 )
 
 const (
-	HumanCoinUnit = "eve"
-	BaseCoinUnit  = "ueve"
-	UeveExponent  = 6
+	HumanCoinUnit = "wba"
+	BaseCoinUnit  = "uwba" // 1_000_000uwba = 1wba
+	UwbaExponent  = 6
 
 	DefaultBondDenom = BaseCoinUnit
 
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address.
-	AccountAddressPrefix = "eve"
+	AccountAddressPrefix = "wba"
 )
 
 var (

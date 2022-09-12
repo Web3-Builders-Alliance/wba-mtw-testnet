@@ -39,8 +39,6 @@ import (
 
 	// Auth
 	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/auth/ante"
-	eveante "github.com/notional-labs/eve/app/ante"
 
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	"github.com/cosmos/cosmos-sdk/x/auth/posthandler"
@@ -122,7 +120,7 @@ import (
 	paramproposal "github.com/cosmos/cosmos-sdk/x/params/types/proposal"
 
 	// App Params.
-	appparameters "github.com/notional-labs/eve/app/params"
+	appparameters "github.com/web3-builders-alliance/wba/app/params"
 
 	// Slashing.
 	"github.com/cosmos/cosmos-sdk/x/slashing"
@@ -159,22 +157,14 @@ import (
 	wasm "github.com/CosmWasm/wasmd/x/wasm"
 	wasmclient "github.com/CosmWasm/wasmd/x/wasm/client"
 
-	// "github.com/notional-labs/tokenfactory/docs"
-	tokenfactorymodule "github.com/notional-labs/eve/x/tokenfactory"
-	tokenfactorymodulekeeper "github.com/notional-labs/eve/x/tokenfactory/keeper"
-	tokenfactorymoduletypes "github.com/notional-labs/eve/x/tokenfactory/types"
-
-	// GlobalFees (gaia)
-	"github.com/notional-labs/eve/x/globalfee"
-
 	// unnamed import of statik for swagger UI support
 	_ "github.com/cosmos/cosmos-sdk/client/docs/statik"
 )
 
 const (
 	// APP
-	appName = "EveApp"
-	Name    = "Eve"
+	appName = "WbaApp"
+	Name    = "Wba"
 
 	// PROPOSALS
 	ProposalsEnabled = "false"
@@ -231,24 +221,21 @@ var (
 		authzmodule.AppModuleBasic{},
 		groupmodule.AppModuleBasic{},
 		vesting.AppModuleBasic{},
-		tokenfactorymodule.AppModuleBasic{},
 		nftmodule.AppModuleBasic{},
 		wasm.AppModuleBasic{},
-		globalfee.AppModule{},
 	)
 
 	// module account permissions
 	maccPerms = map[string][]string{
-		authtypes.FeeCollectorName:         nil,
-		distrtypes.ModuleName:              nil,
-		minttypes.ModuleName:               {authtypes.Minter},
-		stakingtypes.BondedPoolName:        {authtypes.Burner, authtypes.Staking},
-		stakingtypes.NotBondedPoolName:     {authtypes.Burner, authtypes.Staking},
-		govtypes.ModuleName:                {authtypes.Burner},
-		nft.ModuleName:                     nil,
-		ibctransfertypes.ModuleName:        {authtypes.Minter, authtypes.Burner},
-		tokenfactorymoduletypes.ModuleName: {authtypes.Minter, authtypes.Burner, authtypes.Staking},
-		wasm.ModuleName:                    {authtypes.Burner},
+		authtypes.FeeCollectorName:     nil,
+		distrtypes.ModuleName:          nil,
+		minttypes.ModuleName:           {authtypes.Minter},
+		stakingtypes.BondedPoolName:    {authtypes.Burner, authtypes.Staking},
+		stakingtypes.NotBondedPoolName: {authtypes.Burner, authtypes.Staking},
+		govtypes.ModuleName:            {authtypes.Burner},
+		nft.ModuleName:                 nil,
+		ibctransfertypes.ModuleName:    {authtypes.Minter, authtypes.Burner},
+		wasm.ModuleName:                {authtypes.Burner},
 	}
 )
 
@@ -296,8 +283,6 @@ type EveApp struct {
 	TransferKeeper   ibctransferkeeper.Keeper
 	WasmKeeper       wasm.Keeper
 	TransferModule   transfer.AppModule
-
-	TokenfactoryKeeper tokenfactorymodulekeeper.Keeper
 
 	// the module manager
 	mm *module.Manager
@@ -347,7 +332,7 @@ func NewEveApp(
 		distrtypes.StoreKey, slashingtypes.StoreKey, govtypes.StoreKey, paramstypes.StoreKey,
 		ibchost.StoreKey, upgradetypes.StoreKey, feegrant.StoreKey, evidencetypes.StoreKey,
 		ibctransfertypes.StoreKey, capabilitytypes.StoreKey, authzkeeper.StoreKey, nftkeeper.StoreKey,
-		group.StoreKey, tokenfactorymoduletypes.StoreKey, wasm.StoreKey,
+		group.StoreKey, wasm.StoreKey,
 	)
 	tkeys := sdk.NewTransientStoreKeys(paramstypes.TStoreKey)
 	// NOTE: The testingkey is just mounted for testing purposes. Actual applications should
@@ -494,15 +479,6 @@ func NewEveApp(
 		),
 	)
 
-	app.TokenfactoryKeeper = *tokenfactorymodulekeeper.NewKeeper(
-		appCodec,
-		keys[tokenfactorymoduletypes.StoreKey],
-		keys[tokenfactorymoduletypes.MemStoreKey],
-
-		app.AccountKeeper,
-		app.BankKeeper,
-	)
-
 	// set the governance module account as the authority for conducting upgrades
 	app.UpgradeKeeper = upgradekeeper.NewKeeper(skipUpgradeHeights, keys[upgradetypes.StoreKey], appCodec, homePath, app.BaseApp, authtypes.NewModuleAddress(govtypes.ModuleName).String())
 
@@ -560,10 +536,8 @@ func NewEveApp(
 		authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 		groupmodule.NewAppModule(appCodec, app.GroupKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 		nftmodule.NewAppModule(appCodec, app.NFTKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
-		tokenfactorymodule.NewAppModule(appCodec, app.TokenfactoryKeeper),
 		wasm.NewAppModule(appCodec, &app.WasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
 		ibc.NewAppModule(app.IBCKeeper),
-		globalfee.NewAppModule(app.GetSubspace(globalfee.ModuleName)),
 	)
 
 	// During begin block slashing happens after distr.BeginBlocker so that
@@ -576,16 +550,16 @@ func NewEveApp(
 		slashingtypes.ModuleName, evidencetypes.ModuleName, stakingtypes.ModuleName, ibchost.ModuleName,
 		ibctransfertypes.ModuleName, authtypes.ModuleName, banktypes.ModuleName, govtypes.ModuleName,
 		crisistypes.ModuleName, genutiltypes.ModuleName, authz.ModuleName, feegrant.ModuleName,
-		nft.ModuleName, group.ModuleName, paramstypes.ModuleName, vestingtypes.ModuleName, tokenfactorymoduletypes.ModuleName,
-		wasm.ModuleName, globalfee.ModuleName,
+		nft.ModuleName, group.ModuleName, paramstypes.ModuleName, vestingtypes.ModuleName,
+		wasm.ModuleName,
 	)
 	app.mm.SetOrderEndBlockers(
 		crisistypes.ModuleName, govtypes.ModuleName, stakingtypes.ModuleName, capabilitytypes.ModuleName,
 		authtypes.ModuleName, banktypes.ModuleName, distrtypes.ModuleName, slashingtypes.ModuleName,
 		ibchost.ModuleName, minttypes.ModuleName, genutiltypes.ModuleName, evidencetypes.ModuleName,
 		authz.ModuleName, feegrant.ModuleName, nft.ModuleName, group.ModuleName, paramstypes.ModuleName,
-		upgradetypes.ModuleName, vestingtypes.ModuleName, ibctransfertypes.ModuleName, tokenfactorymoduletypes.ModuleName,
-		wasm.ModuleName, globalfee.ModuleName,
+		upgradetypes.ModuleName, vestingtypes.ModuleName, ibctransfertypes.ModuleName,
+		wasm.ModuleName,
 	)
 
 	// NOTE: The genutils module must occur after staking so that pools are
@@ -599,8 +573,8 @@ func NewEveApp(
 		stakingtypes.ModuleName, slashingtypes.ModuleName, govtypes.ModuleName, minttypes.ModuleName,
 		crisistypes.ModuleName, ibchost.ModuleName, genutiltypes.ModuleName, evidencetypes.ModuleName,
 		authz.ModuleName, ibctransfertypes.ModuleName, feegrant.ModuleName, nft.ModuleName, group.ModuleName,
-		vestingtypes.ModuleName, upgradetypes.ModuleName, paramstypes.ModuleName, tokenfactorymoduletypes.ModuleName,
-		wasm.ModuleName, globalfee.ModuleName,
+		vestingtypes.ModuleName, upgradetypes.ModuleName, paramstypes.ModuleName,
+		wasm.ModuleName,
 	) // wasm after ibc transferwasm.ModuleName,
 
 	// Uncomment if you want to set a custom migration order here.
@@ -679,26 +653,26 @@ func (app *EveApp) setAnteHandler(appOpts servertypes.AppOptions, txConfig clien
 	}
 
 	// eve handle wraps the normal ante handler with our added GlobalFeee and BypassMinFee types
-	anteHandler, err := eveante.NewAnteHandler(
-		eveante.HandlerOptions{
-			HandlerOptions: ante.HandlerOptions{
-				AccountKeeper:   app.AccountKeeper,
-				BankKeeper:      app.BankKeeper,
-				SignModeHandler: txConfig.SignModeHandler(),
-				FeegrantKeeper:  app.FeeGrantKeeper,
-				SigGasConsumer:  ante.DefaultSigVerificationGasConsumer,
-				// TODO: ? GlobalFeeSubspace: app.Subspace(app.globalFeeSubspace),
-			},
-			IBCkeeper:            app.IBCKeeper,
-			BypassMinFeeMsgTypes: bypassMinFeeMsgTypes,
-			GlobalFeeSubspace:    app.GetSubspace(globalfee.ModuleName),
-		},
-	)
-	if err != nil {
-		panic(err)
-	}
+	// anteHandler, err := NewAnteHandler(
+	// 	eveante
+	// )
 
-	app.SetAnteHandler(anteHandler)
+	// anteHandler, err := ante.NewAnteHandler{
+	// 	ante.HandlerOptions{
+	// 			AccountKeeper:   app.AccountKeeper,
+	// 			BankKeeper:      app.BankKeeper,
+	// 			SignModeHandler: txConfig.SignModeHandler(),
+	// 			FeegrantKeeper:  app.FeeGrantKeeper,
+	// 			SigGasConsumer:  ante.DefaultSigVerificationGasConsumer,
+	// 		}
+	// 	}
+	// }
+
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// app.SetAnteHandler(anteHandler)
 }
 
 func (app *EveApp) setPostHandler() {
@@ -873,8 +847,6 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	paramsKeeper.Subspace(ibctransfertypes.ModuleName)
 	paramsKeeper.Subspace(ibchost.ModuleName)
 	paramsKeeper.Subspace(wasm.ModuleName)
-	paramsKeeper.Subspace(tokenfactorymoduletypes.ModuleName)
-	paramsKeeper.Subspace(globalfee.ModuleName)
 
 	return paramsKeeper
 }

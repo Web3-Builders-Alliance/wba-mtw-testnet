@@ -1,4 +1,4 @@
-module github.com/notional-labs/eve
+module github.com/web3-builders-alliance/wba
 
 go 1.19
 

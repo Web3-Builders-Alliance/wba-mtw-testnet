@@ -9,7 +9,7 @@
 
 - Determine what is needed for this process
 
-- wba testnet, wba-mtw-testnet mono repo [including docs]
+<!-- - wba testnet, wba-mtw-testnet mono repo [including docs] -->
 - TODOs go in issues
 - work in branches / PR drafts, 
 

@@ -7,7 +7,7 @@ package ante_test
 // 	ibcclienttypes "github.com/cosmos/ibc-go/v5/modules/core/02-client/types"
 // 	ibcchanneltypes "github.com/cosmos/ibc-go/v5/modules/core/04-channel/types"
 // 	"github.com/notional-labs/eve/ante"
-// 	gaiaapp "github.com/notional-labs/eve/app"
+// 	gaiaapp "github.com/web3-builders-alliance/wba/app"
 // 	globfeetypes "github.com/notional-labs/eve/x/globalfee/types"
 // )
 
