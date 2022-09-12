@@ -62,11 +62,11 @@ func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
 		WithInput(os.Stdin).
 		WithAccountRetriever(types.AccountRetriever{}).
 		WithHomeDir(app.DefaultNodeHome).
-		WithViper("EVE")
+		WithViper("WBA")
 
 	rootCmd := &cobra.Command{
-		Use:   "eved",
-		Short: "The eve modern blockchain",
+		Use:   "wbad",
+		Short: "The wba testnet blockchain",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			// set the default command outputs
 			cmd.SetOut(cmd.OutOrStdout())

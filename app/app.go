@@ -300,7 +300,7 @@ func init() {
 		panic(err)
 	}
 
-	DefaultNodeHome = filepath.Join(userHomeDir, ".eved")
+	DefaultNodeHome = filepath.Join(userHomeDir, ".wbad")
 }
 
 // NewEveApp returns a reference to an initialized EveApp.
