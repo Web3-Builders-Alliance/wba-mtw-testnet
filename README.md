@@ -1,6 +1,6 @@
 ## WBA TODO - testnet
-[] Build a test chain
-[] Execute handshakes for IBC
+[x] Build a test chain
+[] Execute handshakes for IBC (ts-relayer)
 - [] Client
 - [] Connect
 - [] Channel
