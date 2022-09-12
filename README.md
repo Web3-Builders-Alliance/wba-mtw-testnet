@@ -4,6 +4,10 @@
 
 For instructions, see [Install](docs/INSTALL.md)
 
+## What was done to start this project
+
+For this information and rough CosmosSDK notes, please view [the documentation here](docs/README.md)
+
 ## Credit
 
 Fork of the [Eve](https://github.com/notional-labs/eve) project.
