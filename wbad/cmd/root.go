@@ -106,8 +106,8 @@ func initTendermintConfig() *tmcfg.Config {
 	cfg.P2P.MaxNumInboundPeers = 200
 	cfg.P2P.MaxNumOutboundPeers = 40
 
-	// block times
-	// cfg.Consensus.TimeoutCommit = 2 * time.Second              // 2s blocks, think more on it later
+	// block time changes
+	// cfg.Consensus.TimeoutCommit = 6 * time.Second // 2s blocks, think more on it later
 	// cfg.Consensus.SkipTimeoutCommit = true                     // when we have 100% of signatures, block is done, don't wait for the TimeoutCommit
 	// cfg.Consensus.CreateEmptyBlocksInterval = 60 * time.Second // when there aren't transactions, make blocks once per minute to keep the chain light
 	// cfg.Consensus.CreateEmptyBlocks = false                    // Don't make empty blocks
@@ -146,8 +146,8 @@ func initAppConfig() (string, interface{}) {
 	// server config.
 	srvCfg := serverconfig.DefaultConfig()
 	srvCfg.BaseConfig.AppDBBackend = "pebbledb"
-	srvCfg.MinGasPrices = "25uwba" // TODO: what are we setting this at?
-	srvCfg.API.Enable = true       // enable 1317 port (API / 'lcd' by default)
+	srvCfg.MinGasPrices = "0uwba"
+	srvCfg.API.Enable = true // enable 1317 port (API / 'lcd' by default)
 	srvCfg.StateSync.SnapshotInterval = 1500
 	srvCfg.StateSync.SnapshotKeepRecent = 2
 	srvCfg.Rosetta.DenomToSuggest = "uwba"
@@ -172,16 +172,6 @@ query_gas_limit = 300000
 # This is the number of wasm vm instances we keep cached in memory for speed-up
 # Warning: this is currently unstable and may lead to crashes, best to keep for 0 unless testing locally
 lru_size = 0
-
-###############################################################################
-###                        Custom Eve Configuration                        ###
-###############################################################################
-# bypass-min-fee-msg-types defines custom message types the operator may set that
-# will bypass minimum fee checks during CheckTx.
-#
-# Example:
-# ["/ibc.core.channel.v1.MsgRecvPacket", "/ibc.core.channel.v1.MsgAcknowledgement", ...]
-bypass-min-fee-msg-types = [{{ range .BypassMinFeeMsgTypes }}{{ printf "%q, " . }}{{end}}]
 `
 
 	return customAppTemplate, customAppConfig
@@ -199,7 +189,7 @@ func initRootCmd(rootCmd *cobra.Command, encodingConfig params.EncodingConfig) {
 		genutilcli.ValidateGenesisCmd(app.ModuleBasics),
 		AddGenesisAccountCmd(app.DefaultNodeHome),
 		tmcli.NewCompletionCmd(rootCmd, true),
-		//		NewTestnetCmd(app.ModuleBasics, banktypes.GenesisBalancesIterator{}),
+		//		NewTestnetCmd(app.ModuleBasics, banktypes.GenesisBalancesIterator{}), // testnet command kinda bleh, just use ./test_node.sh
 		debug.Cmd(),
 		config.Cmd(),
 	)
