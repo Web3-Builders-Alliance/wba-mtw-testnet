@@ -159,7 +159,6 @@ func initAppConfig() (string, interface{}) {
 			LruSize:       1,
 			QueryGasLimit: 300000,
 		},
-		BypassMinFeeMsgTypes: app.GetDefaultBypassFeeMessages(),
 	}
 
 	customAppTemplate := serverconfig.DefaultConfigTemplate + `
