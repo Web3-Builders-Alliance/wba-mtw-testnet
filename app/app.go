@@ -647,10 +647,10 @@ func GetDefaultBypassFeeMessages() []string {
 }
 
 func (app *EveApp) setAnteHandler(appOpts servertypes.AppOptions, txConfig client.TxConfig) {
-	bypassMinFeeMsgTypes := cast.ToStringSlice(appOpts.Get(appparameters.BypassMinFeeMsgTypesKey))
-	if bypassMinFeeMsgTypes == nil {
-		bypassMinFeeMsgTypes = GetDefaultBypassFeeMessages()
-	}
+	// bypassMinFeeMsgTypes := cast.ToStringSlice(appOpts.Get(appparameters.BypassMinFeeMsgTypesKey))
+	// if bypassMinFeeMsgTypes == nil {
+	// 	bypassMinFeeMsgTypes = GetDefaultBypassFeeMessages()
+	// }
 
 	// eve handle wraps the normal ante handler with our added GlobalFeee and BypassMinFee types
 	// anteHandler, err := NewAnteHandler(
