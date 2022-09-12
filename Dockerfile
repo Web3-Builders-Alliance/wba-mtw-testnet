@@ -1,5 +1,5 @@
-# docker build . -t notional-labs/eve:latest
-# docker run --rm -it notional-labs/eve /bin/sh
+# docker build . -t wba-chain:latest
+# docker run --rm -it wba-chain /bin/sh
 
 FROM archlinux
 

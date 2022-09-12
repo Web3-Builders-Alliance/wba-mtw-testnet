@@ -1,5 +1,5 @@
 ```
-eved keys add [keyname] --recover
+wbad keys add [keyname] --recover
 ```
 
 # Validator setup instructions
@@ -14,23 +14,23 @@ MAX_RATE='0.20'        # 20%
 COMMISSION_RATE='0.05' # 5%
 MAX_CHANGE='0.05'      # 5%
 CHAIN_ID='eve-tn1'
-PROJECT_HOME="${HOME}/.eved"
-KEYNAME_ADDR=$(eved keys show $KEYNAME -a)
+PROJECT_HOME="${HOME}/.wbad"
+KEYNAME_ADDR=$(wbad keys show $KEYNAME -a)
 # /Validator variables
 
 # echo -e "$KEYNAME\n$MONIKER\n$DETAILS\n$SECURITY_CONTACT\n$WEBSITE\n$MAX_RATE\n$COMMISSION_RATE\n$MAX_CHANGE\n$CHAIN_ID\n$HOME_DIR\n$KEYNAME_ADDR"
 
 # Remove old files if they exist
-eved tendermint unsafe-reset-all
-rm $HOME/.eved/config/genesis.json
-rm $HOME/.eved/config/gentx/*.json
+wbad tendermint unsafe-reset-all
+rm $HOME/.wbad/config/genesis.json
+rm $HOME/.wbad/config/gentx/*.json
 
 # Give yourself 1exp for the genesis Tx signed
-eved init "$MONIKER" --chain-id $CHAIN_ID --staking-bond-denom ueve
-eved add-genesis-account $KEYNAME_ADDR 1000000ueve
+wbad init "$MONIKER" --chain-id $CHAIN_ID --staking-bond-denom uwba
+wbad add-genesis-account $KEYNAME_ADDR 1000000uwba
 
 # genesis transaction using all above variables
-eved gentx $KEYNAME 1000000ueve \
+wbad gentx $KEYNAME 1000000uwba \
     --home=$PROJECT_HOME \
     --chain-id=$CHAIN_ID \
     --moniker="$MONIKER" \

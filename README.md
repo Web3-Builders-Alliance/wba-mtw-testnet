@@ -4,6 +4,10 @@
 
 For instructions, see [Install](docs/INSTALL.md)
 
+## Credit
+
+Fork of the [Eve](https://github.com/notional-labs/eve) project.
+
 ## WBA TODO - testnet
 [x] Build a test chain
 

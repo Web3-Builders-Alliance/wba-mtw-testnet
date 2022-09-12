@@ -8,13 +8,13 @@ from pathlib import Path
 
 LAUNCH_TIME = "2022-09-08T23:00:00Z" # 20 = 3pm CST (4pm EST)
 CHAIN_ID = "eve-tn1"
-GENESIS_FILE=f"{Path.home()}/.eved/config/genesis.json" # Home Dir of the genesis
+GENESIS_FILE=f"{Path.home()}/.wbad/config/genesis.json" # Home Dir of the genesis
 FOLDER = "gentx"
 
 CUSTOM_GENESIS_ACCOUNT_VALUES = {
     # 100eve for both
-    "eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn": f"{100*1_000_000}ueve # reece, using key from ./test_node.sh",
-    # "...": f"{100*1_000_000}ueve # Jacobs eve validator address",
+    "eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn": f"{100*1_000_000}uwba # reece, using key from ./test_node.sh",
+    # "...": f"{100*1_000_000}uwba # Jacobs eve validator address",
 }
 
 def main():
@@ -25,7 +25,7 @@ def main():
 
 def resetGenesisFile():    
     if not os.path.exists(GENESIS_FILE):
-        print(f"# [!] Genesis file doesn't exist. Run `eved init test --chain-id {CHAIN_ID}`")
+        print(f"# [!] Genesis file doesn't exist. Run `wbad init test --chain-id {CHAIN_ID}`")
         return
 
     # load genesis.json & remove all values for accounts & supply
@@ -40,7 +40,7 @@ def resetGenesisFile():
 
         genesis["app_state"]['genutil']["gen_txs"] = []
 
-        genesis["app_state"]['gov']["deposit_params"]['min_deposit'][0]['denom'] = 'ueve'
+        genesis["app_state"]['gov']["deposit_params"]['min_deposit'][0]['denom'] = 'uwba'
         genesis["app_state"]['gov']["voting_params"]['voting_period'] = '300s' # 5 min = 172800s, 5 days mainet?
 
         genesis["app_state"]['slashing']['params']["signed_blocks_window"] = "10000"
@@ -48,11 +48,11 @@ def resetGenesisFile():
         genesis["app_state"]['slashing']['params']["slash_fraction_double_sign"] = '0.050000000000000000' # 5% if you SlashLikeMo
         genesis["app_state"]['slashing']['params']["slash_fraction_downtime"] = '0.00000000000000000' # no downtime slash like Juno
 
-        genesis["app_state"]['staking']['params']["bond_denom"] = 'ueve' 
-        genesis["app_state"]['crisis']['constant_fee']["denom"] = 'ueve' 
+        genesis["app_state"]['staking']['params']["bond_denom"] = 'uwba' 
+        genesis["app_state"]['crisis']['constant_fee']["denom"] = 'uwba' 
 
         genesis["app_state"]['mint']["minter"]["inflation"] = '0.150000000000000000' # 15% inflation
-        genesis["app_state"]['mint']["params"]["mint_denom"] = 'ueve'        
+        genesis["app_state"]['mint']["params"]["mint_denom"] = 'uwba'        
 
 
     # save genesis.json
@@ -90,12 +90,12 @@ def createGenesisAccountsCommands():
 
         if val_addr not in CUSTOM_GENESIS_ACCOUNT_VALUES.keys():
             # print()
-            output += f"eved add-genesis-account {val_addr} {amt}uexp,10000000000ucraft #{moniker}\n"
+            output += f"wbad add-genesis-account {val_addr} {amt}uexp,10000000000ucraft #{moniker}\n"
             continue # 
                 
     for account in CUSTOM_GENESIS_ACCOUNT_VALUES:
         # print(f"craftd add-genesis-account {account} {CUSTOM_GENESIS_ACCOUNT_VALUES[account]}")
-        output += f"eved add-genesis-account {account} {CUSTOM_GENESIS_ACCOUNT_VALUES[account]}\n"
+        output += f"wbad add-genesis-account {account} {CUSTOM_GENESIS_ACCOUNT_VALUES[account]}\n"
 
     # save output to file in this directory
     current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -103,8 +103,8 @@ def createGenesisAccountsCommands():
         f.write(output)
 
     print(f"# [!] COPY-PASTE-RUN THE \"sh run_these_genesis_balances.sh\" ABOVE TO CREATE THE GENESIS ACCOUNTS")
-    print(f"# [!] THEN `eved collect-gentxs --gentx-dir gentx/`")
-    print(f"# [!] THEN `eved validate-genesis`")
+    print(f"# [!] THEN `wbad collect-gentxs --gentx-dir gentx/`")
+    print(f"# [!] THEN `wbad validate-genesis`")
     print(f"# [!] THEN `code (LOCATION_OF_GENESIS_FILE), AND PUT ON MACHINES`")
 
 

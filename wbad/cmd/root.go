@@ -146,11 +146,11 @@ func initAppConfig() (string, interface{}) {
 	// server config.
 	srvCfg := serverconfig.DefaultConfig()
 	srvCfg.BaseConfig.AppDBBackend = "pebbledb"
-	srvCfg.MinGasPrices = "25ueve" // TODO: what are we setting this at?
+	srvCfg.MinGasPrices = "25uwba" // TODO: what are we setting this at?
 	srvCfg.API.Enable = true       // enable 1317 port (API / 'lcd' by default)
 	srvCfg.StateSync.SnapshotInterval = 1500
 	srvCfg.StateSync.SnapshotKeepRecent = 2
-	srvCfg.Rosetta.DenomToSuggest = "ueve"
+	srvCfg.Rosetta.DenomToSuggest = "uwba"
 	srvCfg.Rosetta.Enable = true
 
 	customAppConfig := CustomAppConfig{
