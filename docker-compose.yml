@@ -3,7 +3,7 @@ version: "3"
 services:
   wbanode1:
     container_name: wbanode1
-    image: "wba"
+    image: "wba-chain"
     # build: .
     environment:
       - DEBUG=1
@@ -28,7 +28,7 @@ services:
 
   wbanode2:
     container_name: wbanode2
-    image: "wba"
+    image: "wba-chain"
     # build: .
     environment:
       - DEBUG=1

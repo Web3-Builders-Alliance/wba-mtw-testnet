@@ -6,7 +6,7 @@ FROM archlinux
 # install packages
 RUN pacman -Sy --noconfirm go 
 RUN pacman -Sy --noconfirm archlinux-keyring 
-RUN pacman -Sy --noconfirm make gcc base jq
+RUN pacman -Sy --noconfirm make gcc base jq git
 
 # set working directory
 WORKDIR /app

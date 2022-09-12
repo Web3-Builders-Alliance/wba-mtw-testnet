@@ -1,15 +1,17 @@
+# TODO: doesnt work, WIP. 
+
 # call on build to make a new folder which we can mount too via compose.
 # this way we can build each node to share the latests gentx
 # most commands taken from ./test_node.sh
 
-CHAINID="eve-d"  # eve-docker
+CHAINID="wba-d"  # eve-docker
 KEYALGO="secp256k1"
 KEYRING="test"  # export EVE_KEYRING="TEST"
 LOGLEVEL="info"
-KEY="eve1"      # eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn
-MONIKER1="dockereve1"
-KEY2="eve2"     # eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2
-MONIKER2="dockereve2"
+KEY="wba1"      # eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn
+MONIKER1="dockerwba1"
+KEY2="wba2"     # eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2
+MONIKER2="dockerwba2"
 
 # File Location
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -20,8 +22,9 @@ if [ ${#SCRIPT_DIR} -gt 7 ]; then
   rm -rf $SCRIPT_DIR/.testnets
 fi
 
-V1=$SCRIPT_DIR/.testnets/v1 # /home/reece/Desktop/Programming/Go/eve/docker/.testnets/v1
-V2=$SCRIPT_DIR/.testnets/v2 # /home/reece/Desktop/Programming/Go/eve/docker/.testnets/v2
+V1=$SCRIPT_DIR/.testnets/v1 # /home/reece/Desktop/Programming/Go/chain_and_relayer/docker/.testnets/v1
+V2=$SCRIPT_DIR/.testnets/v2 # /home/reece/Desktop/Programming/Go/chain_and_relayer/docker/.testnets/v2
+
 
 # init chain from key 1, giving us a fresh new genesis with latests features
 wbad init $MONIKER1 --chain-id $CHAINID --home $TESTNETS_SHARED_DIR
