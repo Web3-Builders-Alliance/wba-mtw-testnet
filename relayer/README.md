@@ -40,10 +40,14 @@ then we need to add the WBA chain to the config file
 
 ```bash
 # osmo / wasmd test
-ibc-setup init --src local_wasm --dest local_osmo
+ibc-setup init --src local_wasm --dest local_gaia
 # osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq, same mnumonic is below
 
 # wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
+# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
+
+
+# gaiad keys add relayer --recover --hd-path " m/44'/1234'/0'/3'"
 ```
 
 ```bash
