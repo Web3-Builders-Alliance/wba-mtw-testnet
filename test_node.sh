@@ -17,7 +17,7 @@ command -v jq > /dev/null 2>&1 || { echo >&2 "jq not installed. More info: https
 
 from_scratch () {
 
-  make install
+  # make install
 
   # remove existing daemon
   rm -rf ~/.wbad/* 
