@@ -40,6 +40,9 @@ import (
 	// Auth
 	"github.com/cosmos/cosmos-sdk/x/auth"
 
+	// Ante
+	ante "github.com/cosmos/cosmos-sdk/x/auth/ante"
+
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	"github.com/cosmos/cosmos-sdk/x/auth/posthandler"
 	authsims "github.com/cosmos/cosmos-sdk/x/auth/simulation"
@@ -145,8 +148,6 @@ import (
 	porttypes "github.com/cosmos/ibc-go/v5/modules/core/05-port/types"
 	ibchost "github.com/cosmos/ibc-go/v5/modules/core/24-host"
 	ibckeeper "github.com/cosmos/ibc-go/v5/modules/core/keeper"
-
-	ibcchanneltypes "github.com/cosmos/ibc-go/v5/modules/core/04-channel/types"
 
 	// IBC transfer module: Enables IBC transfer of coins between accounts using the transfer port on an IBC channel.
 	"github.com/cosmos/ibc-go/v5/modules/apps/transfer"
@@ -609,10 +610,11 @@ func NewEveApp(
 	app.MountMemoryStores(memKeys)
 
 	// initialize BaseApp
-	app.setAnteHandler(appOpts, encodingConfig.TxConfig)
 	app.SetInitChainer(app.InitChainer)
 	app.SetBeginBlocker(app.BeginBlocker)
 	app.SetEndBlocker(app.EndBlocker)
+	app.setAnteHandler(encodingConfig.TxConfig)
+	// app.setAnteHandler(encodingConfig.TxConfig)
 	// In v0.46, the SDK introduces _postHandlers_. PostHandlers are like
 	// antehandlers, but are run _after_ the `runMsgs` execution. They are also
 	// defined as a chain, and have the same signature as antehandlers.
@@ -637,42 +639,22 @@ func NewEveApp(
 	return app
 }
 
-func GetDefaultBypassFeeMessages() []string {
-	return []string{
-		sdk.MsgTypeURL(&ibcchanneltypes.MsgRecvPacket{}),
-		sdk.MsgTypeURL(&ibcchanneltypes.MsgAcknowledgement{}),
-		sdk.MsgTypeURL(&ibcclienttypes.MsgUpdateClient{}),
-		"/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
+func (app *EveApp) setAnteHandler(txConfig client.TxConfig) {
+	anteHandler, err := ante.NewAnteHandler(
+		ante.HandlerOptions{
+			AccountKeeper:   app.AccountKeeper,
+			BankKeeper:      app.BankKeeper,
+			SignModeHandler: txConfig.SignModeHandler(),
+			FeegrantKeeper:  app.FeeGrantKeeper,
+			SigGasConsumer:  ante.DefaultSigVerificationGasConsumer,
+		},
+	)
+
+	if err != nil {
+		panic(err)
 	}
-}
 
-func (app *EveApp) setAnteHandler(appOpts servertypes.AppOptions, txConfig client.TxConfig) {
-	// bypassMinFeeMsgTypes := cast.ToStringSlice(appOpts.Get(appparameters.BypassMinFeeMsgTypesKey))
-	// if bypassMinFeeMsgTypes == nil {
-	// 	bypassMinFeeMsgTypes = GetDefaultBypassFeeMessages()
-	// }
-
-	// eve handle wraps the normal ante handler with our added GlobalFeee and BypassMinFee types
-	// anteHandler, err := NewAnteHandler(
-	// 	eveante
-	// )
-
-	// anteHandler, err := ante.NewAnteHandler{
-	// 	ante.HandlerOptions{
-	// 			AccountKeeper:   app.AccountKeeper,
-	// 			BankKeeper:      app.BankKeeper,
-	// 			SignModeHandler: txConfig.SignModeHandler(),
-	// 			FeegrantKeeper:  app.FeeGrantKeeper,
-	// 			SigGasConsumer:  ante.DefaultSigVerificationGasConsumer,
-	// 		}
-	// 	}
-	// }
-
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// app.SetAnteHandler(anteHandler)
+	app.SetAnteHandler(anteHandler)
 }
 
 func (app *EveApp) setPostHandler() {
