@@ -20,7 +20,7 @@ docker run --rm \
   "$REPOSITORY:$VERSION" \
   /opt/setup.sh \
   osmo1lvrwcvrqlc5ktzp2c4t22xgkx29q3y83hdcc5d \
-  osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq
+  osmo194tzkhycg85lfgem4hgls2w8vn24lzss5asjlx
 
 sudo chmod -R g+rwx template/.osmosisd/
 sudo chmod -R a+rx template/.osmosisd/

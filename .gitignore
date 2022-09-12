@@ -1,4 +1,4 @@
 .vscode
 build/
 .testnets/
-debug-wasmd.log
+*.log

@@ -53,7 +53,7 @@ ibc-setup init --src local_wasm --dest local_wba
 # Destination address: wba1lwwr2junyeej0mts25rmjshqw2cw8w6604mfsk
 
 # get both of these addresses from your relayer keys
-ibc-setup keys list | grep "local_wasm\|local_wba"
+ibc-setup keys list | grep "local_wasm\|local_wba\|local_osmo"
 
 
 
@@ -75,6 +75,8 @@ mnemonic: term egg forest panic canvas equip way artefact access lunar taste fri
 #   /opt/setup.sh \
 #   wasm14qemq0vw6y3gc3u3e0aty2e764u4gs5lndxgyk \
 #   wasm18ef4ede5mscprrx3270flk9d0w4f2mppw3e6sc
+
+# then osmo194tzkhycg85lfgem4hgls2w8vn24lzss5asjlx for osmosis
 
 
 
