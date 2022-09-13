@@ -48,44 +48,6 @@ then we need to add the WBA chain to the config file
       - https://craft-rpc.crafteconomy.io:443
 ```
 
-# Working wasm+craft
-```bash
-# wasmd + craft test for right now
-ibc-setup init --src local_wasm --dest craft
-# mnemonic: term egg forest panic canvas equip way artefact access lunar taste fringe
-# craft1lwwr2junyeej0mts25rmjshqw2cw8w66sxrxnw
-# osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq, same mnumonic is below
-
-# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
-# craftd keys add relayer --recover
-# gaiad keys add relayer --recover --hd-path " m/44'/1234'/0'/3'"
-
-# Created channel:
-#   wasmd-1: transfer/channel-0 (connection-0)
-#   craft-v5: transfer/channel-0 (connection-0)
-
-ibc-relayer start -v --poll 15
-# verbose: Get pending packets on wasmd-1
-# verbose: Get pending packets on craft-v5
-# info: Relay 0 packets from wasmd-1 => craft-v5
-# info: Relay 0 packets from craft-v5 => wasmd-1
-
-
-wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
-# success!
-# info: Relay 1 packets from wasmd-1 => craft-v5
-# info: Check whether client on craft-v5 >= height 1301
-# info: Relay 0 packets from craft-v5 => wasmd-1
-# info: Update Client on craft-v5
-
-
-
-# craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
-# balances:
-# - amount: "200"
-#   denom: ibc/D7BDEDB1FD74C3EEA950D160B41266625D64493B3DCB657B6BB58B0F444F0AB3
-```
-
 # wba -> craft
 ```bash
 ibc-setup init --src local_wba --dest craft
@@ -110,15 +72,54 @@ ibc-relayer start -v --poll 5
 
 # wbad send 690uwba to craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh from wba13unas8vt8lz8dzyxhqjc8kw54423qm50ve9hp9 (genesis wba2) on the src connection of channel-0
 wbad tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 690uwba --from $(wbad keys show -a wba2) --node http://localhost:26657 --chain-id wba-t1 --fees 5000uwba --packet-timeout-height 0-0 --yes
-
 # info: Relay 1 packets from wba-t1 => craft-v5
 
 # craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
 # - amount: "690"
 #   denom: ibc/EC389C35C5F7180B6B6677A1AD112DB1BADA6655B38D7B1FB673F06DD9BD9666
+
+
+# craftd q ibc-transfer denom-trace EC389C35C5F7180B6B6677A1AD112DB1BADA6655B38D7B1FB673F06DD9BD9666
+# denom_trace:
+#   base_denom: uwba
+#   path: transfer/channel-1
 ```
 
-# not working yet idk why
+
+# Working wasm+craft
+```bash
+# wasmd + craft test for right now
+ibc-setup init --src local_wasm --dest craft
+# mnemonic: term egg forest panic canvas equip way artefact access lunar taste fringe
+
+# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"  # craft1lwwr2junyeej0mts25rmjshqw2cw8w66sxrxnw
+# craftd keys add relayer --recover --hd-path "m/44'/118'/0'/0/0" # wasm18ef4ede5mscprrx3270flk9d0w4f2mppw3e6sc
+
+# Created channel:
+#   wasmd-1: transfer/channel-0 (connection-0) [src]
+#   craft-v5: transfer/channel-0 (connection-0) [dest of where we send packets TOO]
+
+ibc-relayer start -v --poll 5 # check for packets every 5 seconds, block times are 6 seconds on wba
+# verbose: Get pending packets on wasmd-1
+# verbose: Get pending packets on craft-v5
+
+# create a transfer from wasmd to the craft chain transfering the tokens to the craft address
+wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
+# success ful transfer!
+# info: Relay 1 packets from wasmd-1 => craft-v5
+# info: Check whether client on craft-v5 >= height 1301
+# info: Relay 0 packets from craft-v5 => wasmd-1
+# info: Update Client on craft-v5
+
+
+# craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
+# balances:
+# - amount: "200"
+#   denom: ibc/D7BDEDB1FD74C3EEA950D160B41266625D64493B3DCB657B6BB58B0F444F0AB3
+```
+
+
+# not working yet idk why (fixed)
 ```bash
 ibc-setup init --src local_wasm --dest local_wba
 # Saved configuration to /home/reece/.ibc-setup/app.yaml
@@ -150,9 +151,6 @@ mnemonic: term egg forest panic canvas equip way artefact access lunar taste fri
 #   wasm18ef4ede5mscprrx3270flk9d0w4f2mppw3e6sc
 
 # then osmo194tzkhycg85lfgem4hgls2w8vn24lzss5asjlx for osmosis
-
-
-
 
 # start wasmd docker node
 ./ci-scripts/wasmd/start.sh
