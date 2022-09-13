@@ -35,21 +35,96 @@ then we need to add the WBA chain to the config file
     estimated_indexer_time: 60
     rpc:
       - http://localhost:26659
+
+  craft:
+    chain_id: craft-v5
+    prefix: craft
+    gas_price: 0.025ucraft
+    hd_path: m/44'/118'/0'/0/0
+    ics20_port: 'transfer'
+    estimated_block_time: 6000
+    estimated_indexer_time: 250
+    rpc:
+      - https://craft-rpc.crafteconomy.io:443
 ```
 
-
+# Working wasm+craft
 ```bash
-# osmo / wasmd test
-ibc-setup init --src local_wasm --dest local_gaia
+# wasmd + craft test for right now
+ibc-setup init --src local_wasm --dest craft
+# mnemonic: term egg forest panic canvas equip way artefact access lunar taste fringe
+# craft1lwwr2junyeej0mts25rmjshqw2cw8w66sxrxnw
 # osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq, same mnumonic is below
 
 # wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
-# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
-
-
+# craftd keys add relayer --recover
 # gaiad keys add relayer --recover --hd-path " m/44'/1234'/0'/3'"
+
+# Created channel:
+#   wasmd-1: transfer/channel-0 (connection-0)
+#   craft-v5: transfer/channel-0 (connection-0)
+
+ibc-relayer start -v --poll 15
+# verbose: Get pending packets on wasmd-1
+# verbose: Get pending packets on craft-v5
+# info: Relay 0 packets from wasmd-1 => craft-v5
+# info: Relay 0 packets from craft-v5 => wasmd-1
+
+
+wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
+# success!
+# info: Relay 1 packets from wasmd-1 => craft-v5
+# info: Check whether client on craft-v5 >= height 1301
+# info: Relay 0 packets from craft-v5 => wasmd-1
+# info: Update Client on craft-v5
+
+
+
+# craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
+# balances:
+# - amount: "200"
+#   denom: ibc/D7BDEDB1FD74C3EEA950D160B41266625D64493B3DCB657B6BB58B0F444F0AB3
 ```
 
+# wba -> craft
+```bash
+ibc-setup init --src local_wba --dest craft
+# mnemonic: term egg forest panic canvas equip way artefact access lunar taste fringe
+# craft1lwwr2junyeej0mts25rmjshqw2cw8w66sxrxnw
+# osmo1lwwr2junyeej0mts25rmjshqw2cw8w66etrpqq, same mnumonic is below
+
+# wasmd keys add relayer --recover --hd-path "m/44'/1234'/0'/2'"
+# craftd keys add relayer --recover
+# gaiad keys add relayer --recover --hd-path " m/44'/1234'/0'/3'"
+
+ibc-setup ics20 -v
+# Created channel:
+#   wasmd-1: transfer/channel-0 (connection-0)
+#   craft-v5: transfer/channel-0 (connection-0)
+
+ibc-relayer start -v --poll 15
+# verbose: Get pending packets on wasmd-1
+# verbose: Get pending packets on craft-v5
+# info: Relay 0 packets from wasmd-1 => craft-v5
+# info: Relay 0 packets from craft-v5 => wasmd-1
+
+
+wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
+# success!
+# info: Relay 1 packets from wasmd-1 => craft-v5
+# info: Check whether client on craft-v5 >= height 1301
+# info: Relay 0 packets from craft-v5 => wasmd-1
+# info: Update Client on craft-v5
+
+
+
+# craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
+# balances:
+# - amount: "200"
+#   denom: ibc/D7BDEDB1FD74C3EEA950D160B41266625D64493B3DCB657B6BB58B0F444F0AB3
+```
+
+# not working yet idk why
 ```bash
 ibc-setup init --src local_wasm --dest local_wba
 # Saved configuration to /home/reece/.ibc-setup/app.yaml
@@ -57,7 +132,7 @@ ibc-setup init --src local_wasm --dest local_wba
 # Destination address: wba1lwwr2junyeej0mts25rmjshqw2cw8w6604mfsk
 
 # get both of these addresses from your relayer keys
-ibc-setup keys list | grep "local_wasm\|local_wba\|local_osmo"
+ibc-setup keys list | grep "local_wasm\|local_wba\|local_osmo\|craft"
 
 
 
@@ -145,5 +220,5 @@ ibc-setup ics20 -v
 # start
 ibc-relayer start -v --poll 15
 # send tokens vias IBC channel after above works
-wasmd tx ibc-transfer transfer transfer <channel-id> $(junod keys show -a receiver) 200usponge --from $(wasmd keys show -a sender) --node http://localhost:26659 --chain-id wasmd-1 --fees 2000usponge --packet-timeout-height 0-0
+wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
 ```
