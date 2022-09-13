@@ -76,7 +76,7 @@ cp $TESTNETS_SHARED_DIR/config/genesis.json $V1/config/genesis.json
 wbad add-genesis-account wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228 100000000uwba --keyring-backend $KEYRING --home $V1
 wbad add-genesis-account wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR # also add to main genesis
 
-wbad gentx $KEY 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V1 --moniker $MONIKER1 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id 017e3b0c9a050091cc2bc609af9fb861d3710215
+wbad gentx $KEY 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V1 --moniker $MONIKER1 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id c209ee97b631df98923cadd9667bd61d879e2e1a
 
 # Key 2.
 mkdir -p $V2/config
@@ -85,7 +85,7 @@ cp $TESTNETS_SHARED_DIR/config/genesis.json $V2/config/genesis.json
 wbad add-genesis-account wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7 100000000uwba --keyring-backend $KEYRING --home $V2
 wbad add-genesis-account wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR
 
-wbad gentx $KEY2 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V2 --moniker $MONIKER2 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id 017e3b0c9a050091cc2bc609af9fb861d3710215
+wbad gentx $KEY2 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V2 --moniker $MONIKER2 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id c209ee97b631df98923cadd9667bd61d879e2e1a
 
 # KEY1_NODE_ID=`wbad tendermint show-node-id --home $V1`
 # KEY2_NODE_ID=`wbad tendermint show-node-id --home $V2`
