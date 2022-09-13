@@ -102,26 +102,20 @@ ibc-setup ics20 -v
 #   wasmd-1: transfer/channel-0 (connection-0)
 #   craft-v5: transfer/channel-0 (connection-0)
 
-ibc-relayer start -v --poll 15
+ibc-relayer start -v --poll 5
 # verbose: Get pending packets on wasmd-1
 # verbose: Get pending packets on craft-v5
 # info: Relay 0 packets from wasmd-1 => craft-v5
 # info: Relay 0 packets from craft-v5 => wasmd-1
 
+# wbad send 690uwba to craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh from wba13unas8vt8lz8dzyxhqjc8kw54423qm50ve9hp9 (genesis wba2) on the src connection of channel-0
+wbad tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 690uwba --from $(wbad keys show -a wba2) --node http://localhost:26657 --chain-id wba-t1 --fees 5000uwba --packet-timeout-height 0-0 --yes
 
-wasmd tx ibc-transfer transfer transfer channel-0 $(craftd keys show validator -a) 200ucosm --from $(wasmd keys show -a relayer) --node http://localhost:26659 --chain-id wasmd-1 --fees 5000ucosm --packet-timeout-height 0-0 --yes
-# success!
-# info: Relay 1 packets from wasmd-1 => craft-v5
-# info: Check whether client on craft-v5 >= height 1301
-# info: Relay 0 packets from craft-v5 => wasmd-1
-# info: Update Client on craft-v5
-
-
+# info: Relay 1 packets from wba-t1 => craft-v5
 
 # craftd q bank balances craft13vhr3gkme8hqvfyxd4zkmf5gaus840j5hwuqkh
-# balances:
-# - amount: "200"
-#   denom: ibc/D7BDEDB1FD74C3EEA950D160B41266625D64493B3DCB657B6BB58B0F444F0AB3
+# - amount: "690"
+#   denom: ibc/EC389C35C5F7180B6B6677A1AD112DB1BADA6655B38D7B1FB673F06DD9BD9666
 ```
 
 # not working yet idk why
