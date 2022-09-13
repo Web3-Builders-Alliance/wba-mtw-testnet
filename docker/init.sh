@@ -6,11 +6,11 @@
 
 CHAINID="wba-d"  # eve-docker
 KEYALGO="secp256k1"
-KEYRING="test"  # export EVE_KEYRING="TEST"
+KEYRING="test"
 LOGLEVEL="info"
-KEY="wba1"      # eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn
+KEY="wba1"      # wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228
 MONIKER1="dockerwba1"
-KEY2="wba2"     # eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2
+KEY2="wba2"     # wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7
 MONIKER2="dockerwba2"
 
 # File Location
@@ -29,9 +29,9 @@ V2=$SCRIPT_DIR/.testnets/v2 # /home/reece/Desktop/Programming/Go/chain_and_relay
 # init chain from key 1, giving us a fresh new genesis with latests features
 wbad init $MONIKER1 --chain-id $CHAINID --home $TESTNETS_SHARED_DIR
 
-# key1 - eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn
+# key1 - wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228
 echo "decorate bright ozone fork gallery riot bus exhaust worth way bone indoor calm squirrel merry zero scheme cotton until shop any excess stage laundry" | wbad keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO --home $V1 --recover
-# key2 - eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2
+# key2 - wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7
 echo "yard toss ritual ticket dirt address hood stock shiver add client sketch still brave pen win affair orphan employ choose dream sail slogan poverty" | wbad keys add $KEY2 --keyring-backend $KEYRING --algo $KEYALGO --home $V2 --recover
 
 # Do via docker?
@@ -58,8 +58,6 @@ fi
 # the_time=$(date +%FT%H:%M:${seconds_in_the_future}.000000000Z --utc)
 the_time=$(date +%FT%H:%M:${seconds_in_the_future}Z --utc)
 echo "Setting genesis time to $the_time"
-# exit 0
-# exit 0
 
 # Set gas limit in genesis
 update_test_genesis '.consensus_params["block"]["max_gas"]="100000000"'
@@ -67,28 +65,27 @@ update_test_genesis `printf '.genesis_time="%s"' $the_time`
 update_test_genesis '.app_state["gov"]["voting_params"]["voting_period"]="15s"'
 update_test_genesis '.app_state["staking"]["params"]["bond_denom"]="uwba"'
 update_test_genesis '.app_state["staking"]["params"]["min_commission_rate"]="0.100000000000000000"'
-# update from token -> uwba
 update_test_genesis '.app_state["mint"]["params"]["mint_denom"]="uwba"'  
-update_test_genesis '.app_state["gov"]["deposit_params"]["min_deposit"]=[{"denom": "uwba","amount": "1000000"}]' # 1 eve right now
+update_test_genesis '.app_state["gov"]["deposit_params"]["min_deposit"]=[{"denom": "uwba","amount": "1000000"}]'
 update_test_genesis '.app_state["crisis"]["constant_fee"]={"denom": "uwba","amount": "1000"}'
 
 # Key 1, copy genesis -> $V1, add gen account, gentx
 mkdir -p $V1/config
 cp $TESTNETS_SHARED_DIR/config/genesis.json $V1/config/genesis.json
 
-wbad add-genesis-account eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn 100000000uwba --keyring-backend $KEYRING --home $V1
-wbad add-genesis-account eve1hj5fveer5cjtn4wd6wstzugjfdxzl0xpysfwwn 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR # also add to main genesis
+wbad add-genesis-account wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228 100000000uwba --keyring-backend $KEYRING --home $V1
+wbad add-genesis-account wba1hj5fveer5cjtn4wd6wstzugjfdxzl0xpcfe228 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR # also add to main genesis
 
-wbad gentx $KEY 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V1 --moniker $MONIKER1 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id 017e3b0c9a050091cc2bc609af9fb861d3710215
+wbad gentx $KEY 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V1 --moniker $MONIKER1 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id c209ee97b631df98923cadd9667bd61d879e2e1a
 
 # Key 2.
 mkdir -p $V2/config
 cp $TESTNETS_SHARED_DIR/config/genesis.json $V2/config/genesis.json
 
-wbad add-genesis-account eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2 100000000uwba --keyring-backend $KEYRING --home $V2
-wbad add-genesis-account eve1j4rtuq6zm5mmw9xcjmm7gymlj39tvwnt9h4sm2 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR
+wbad add-genesis-account wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7 100000000uwba --keyring-backend $KEYRING --home $V2
+wbad add-genesis-account wba1j4rtuq6zm5mmw9xcjmm7gymlj39tvwntew95l7 100000000uwba --keyring-backend $KEYRING --home $TESTNETS_SHARED_DIR
 
-wbad gentx $KEY2 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V2 --moniker $MONIKER2 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id 017e3b0c9a050091cc2bc609af9fb861d3710215
+wbad gentx $KEY2 1000000uwba --keyring-backend $KEYRING --chain-id $CHAINID --home $V2 --moniker $MONIKER2 --commission-rate=0.10 --commission-max-rate=1.0 --commission-max-change-rate=0.01 --min-self-delegation "1" --ip 127.0.0.1 --node-id c209ee97b631df98923cadd9667bd61d879e2e1a
 
 # KEY1_NODE_ID=`wbad tendermint show-node-id --home $V1`
 # KEY2_NODE_ID=`wbad tendermint show-node-id --home $V2`

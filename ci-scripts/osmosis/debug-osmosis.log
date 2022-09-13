@@ -1,0 +1,419 @@
+[90m10:08PM[0m [32mINF[0m starting ABCI with Tendermint
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232560, distribution}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232670, superfluid}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232590, params}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232530, bank}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232640, poolincentives}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232570, slashing}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012326a0, tokenfactory}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232600, gamm}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325e0, transfer}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232680, bech32ibc}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325f0, capability}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325c0, upgrade}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232650, authz}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325b0, icahost}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232620, incentives}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232660, txfees}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325d0, evidence}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232630, epochs}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232610, lockup}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232690, wasm}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232580, gov}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232540, staking}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232550, mint}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc0012325a0, ibc}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Upgrading IAVL storage for faster queries + execution on live state. This may take a while [36mcommit=[0m436F6D6D697449447B5B5D3A307D [36mis_lazy=[0mfalse [36mstore_key=[0m"KVStoreKey{0xc001232520, acc}" [36mversion=[0m0
+[90m10:08PM[0m [32mINF[0m Starting multiAppConn service [36mimpl=[0mmultiAppConn [36mmodule=[0mproxy
+[90m10:08PM[0m [32mINF[0m Starting localClient service [36mconnection=[0mquery [36mimpl=[0mlocalClient [36mmodule=[0mabci-client
+[90m10:08PM[0m [32mINF[0m Starting localClient service [36mconnection=[0msnapshot [36mimpl=[0mlocalClient [36mmodule=[0mabci-client
+[90m10:08PM[0m [32mINF[0m Starting localClient service [36mconnection=[0mmempool [36mimpl=[0mlocalClient [36mmodule=[0mabci-client
+[90m10:08PM[0m [32mINF[0m Starting localClient service [36mconnection=[0mconsensus [36mimpl=[0mlocalClient [36mmodule=[0mabci-client
+[90m10:08PM[0m [32mINF[0m Starting EventBus service [36mimpl=[0mEventBus [36mmodule=[0mevents
+[90m10:08PM[0m [32mINF[0m Starting PubSub service [36mimpl=[0mPubSub [36mmodule=[0mpubsub
+[90m10:08PM[0m [32mINF[0m Starting IndexerService service [36mimpl=[0mIndexerService [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m ABCI Handshake App Info [36mhash=[0m [36mheight=[0m0 [36mmodule=[0mconsensus [36mprotocol-version=[0m0 [36msoftware-version=[0m9.0.0
+[90m10:08PM[0m [32mINF[0m ABCI Replay Blocks [36mappHeight=[0m0 [36mmodule=[0mconsensus [36mstateHeight=[0m0 [36mstoreHeight=[0m0
+[90m10:08PM[0m [32mINF[0m initializing blockchain state from genesis.json
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mcapability
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mauth
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mbank
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mdistribution
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mstaking
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mslashing
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mgov
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mmint
+[90m10:08PM[0m [32mINF[0m minted coins from module account [36mamount=[0m225000000000000uosmo [36mfrom=[0mdeveloper_vesting_unvested [36mmodule=[0mx/bank
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mcrisis
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m0/15 [36mmodule=[0mx/crisis [36mname=[0mgamm/pool-account-balance-equals-expected
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m1/15 [36mmodule=[0mx/crisis [36mname=[0mstaking/module-accounts
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m2/15 [36mmodule=[0mx/crisis [36mname=[0mstaking/nonnegative-power
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m3/15 [36mmodule=[0mx/crisis [36mname=[0mstaking/positive-delegation
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m4/15 [36mmodule=[0mx/crisis [36mname=[0mstaking/delegator-shares
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m5/15 [36mmodule=[0mx/crisis [36mname=[0mlockup/synthetic-lockup-invariant
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m6/15 [36mmodule=[0mx/crisis [36mname=[0mlockup/accumulation-store-invariant
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m7/15 [36mmodule=[0mx/crisis [36mname=[0msuperfluid/total-superfluid-delegation-invariant-name
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m8/15 [36mmodule=[0mx/crisis [36mname=[0mbank/nonnegative-outstanding
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m9/15 [36mmodule=[0mx/crisis [36mname=[0mbank/total-supply
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m10/15 [36mmodule=[0mx/crisis [36mname=[0mgov/module-account
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m11/15 [36mmodule=[0mx/crisis [36mname=[0mdistribution/nonnegative-outstanding
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m12/15 [36mmodule=[0mx/crisis [36mname=[0mdistribution/can-withdraw
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m13/15 [36mmodule=[0mx/crisis [36mname=[0mdistribution/reference-count
+[90m10:08PM[0m [32mINF[0m asserting crisis invariants [36minv=[0m14/15 [36mmodule=[0mx/crisis [36mname=[0mdistribution/module-account
+[90m10:08PM[0m [32mINF[0m asserted all invariants [36mduration=[0m2.453292 [36mheight=[0m0 [36mmodule=[0mx/crisis
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mibc
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mgamm
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mtxfees
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mgenutil
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mevidence
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mupgrade
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mvesting
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mtransfer
+[90m10:08PM[0m [32mINF[0m created new capability [36mmodule=[0mibc [36mname=[0mports/transfer
+[90m10:08PM[0m [32mINF[0m port binded [36mmodule=[0mx/ibc/port [36mport=[0mtransfer
+[90m10:08PM[0m [32mINF[0m claimed capability [36mcapability=[0m1 [36mmodule=[0mtransfer [36mname=[0mports/transfer
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mincentives
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mepochs
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mlockup
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mauthz
+[90m10:08PM[0m [32mINF[0m running initialization for module [36mmodule=[0mwasm
+[90m10:08PM[0m [32mINF[0m Done init genesis
+[90m10:08PM[0m [32mINF[0m Completed ABCI Handshake - Tendermint and App are synced [36mappHash=[0m [36mappHeight=[0m0 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Version info [36mblock=[0m11 [36mp2p=[0m8 [36mtendermint_version=[0m0.34.19
+[90m10:08PM[0m [32mINF[0m This node is a validator [36maddr=[0m70945CBFADC5AD2872324B7BF47EE20399777748 [36mmodule=[0mconsensus [36mpubKey=[0m2X3P8gK4OT6envd3OhiBG6AOX8+gnideLmSPu0iTH4U=
+[90m10:08PM[0m [32mINF[0m P2P Node ID [36mID=[0m6fc7957a1304efac8f0df483c8050926c267f413 [36mfile=[0m/root/.osmosisd/config/node_key.json [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Adding persistent peers [36maddrs=[0m[] [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Adding unconditional peer ids [36mids=[0m[] [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Add our address to book [36maddr=[0m{"id":"6fc7957a1304efac8f0df483c8050926c267f413","ip":"0.0.0.0","port":26656} [36mbook=[0m/root/.osmosisd/config/addrbook.json [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Starting Node service [36mimpl=[0mNode
+[90m10:08PM[0m [32mINF[0m Starting pprof server [36mladdr=[0mlocalhost:6060
+[90m10:08PM[0m [32mINF[0m Starting P2P Switch service [36mimpl=[0m"P2P Switch" [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Starting Mempool service [36mimpl=[0mMempool [36mmodule=[0mmempool
+[90m10:08PM[0m [32mINF[0m Starting BlockchainReactor service [36mimpl=[0mBlockchainReactor [36mmodule=[0mblockchain
+[90m10:08PM[0m [32mINF[0m Starting Consensus service [36mimpl=[0mConsensusReactor [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Reactor  [36mmodule=[0mconsensus [36mwaitSync=[0mfalse
+[90m10:08PM[0m [32mINF[0m Starting RPC HTTP server on [::]:26657 [36mmodule=[0mrpc-server
+[90m10:08PM[0m [32mINF[0m Starting State service [36mimpl=[0mConsensusState [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Starting baseWAL service [36mimpl=[0mbaseWAL [36mmodule=[0mconsensus [36mwal=[0m/root/.osmosisd/data/cs.wal/wal
+[90m10:08PM[0m [32mINF[0m Starting Group service [36mimpl=[0mGroup [36mmodule=[0mconsensus [36mwal=[0m/root/.osmosisd/data/cs.wal/wal
+[90m10:08PM[0m [32mINF[0m Starting TimeoutTicker service [36mimpl=[0mTimeoutTicker [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Searching for height [36mheight=[0m1 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/root/.osmosisd/data/cs.wal/wal
+[90m10:08PM[0m [32mINF[0m Searching for height [36mheight=[0m0 [36mmax=[0m0 [36mmin=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/root/.osmosisd/data/cs.wal/wal
+[90m10:08PM[0m [32mINF[0m Found [36mheight=[0m0 [36mindex=[0m0 [36mmodule=[0mconsensus [36mwal=[0m/root/.osmosisd/data/cs.wal/wal
+[90m10:08PM[0m [32mINF[0m Catchup by replaying consensus messages [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Replay: Done [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m Starting Evidence service [36mimpl=[0mEvidence [36mmodule=[0mevidence
+[90m10:08PM[0m [32mINF[0m Starting StateSync service [36mimpl=[0mStateSync [36mmodule=[0mstatesync
+[90m10:08PM[0m [32mINF[0m Starting PEX service [36mimpl=[0mPEX [36mmodule=[0mpex
+[90m10:08PM[0m [32mINF[0m Starting AddrBook service [36mbook=[0m/root/.osmosisd/config/addrbook.json [36mimpl=[0mAddrBook [36mmodule=[0mp2p
+[90m10:08PM[0m [1m[31mERR[0m[0m Connecting to seed failed [36merr=[0m"error looking up host (osmosis.pbcups.org): lookup osmosis.pbcups.org on 216.165.129.158:53: no such host" [36mmodule=[0mpex
+[90m10:08PM[0m [32mINF[0m Saving AddrBook to file [36mbook=[0m/root/.osmosisd/config/addrbook.json [36mmodule=[0mp2p [36msize=[0m0
+[90m10:08PM[0m [32mINF[0m Ensure peers [36mmodule=[0mpex [36mnumDialing=[0m0 [36mnumInPeers=[0m0 [36mnumOutPeers=[0m0 [36mnumToDial=[0m40
+[90m10:08PM[0m [32mINF[0m No addresses to dial. Falling back to seeds [36mmodule=[0mpex
+[90m10:08PM[0m [32mINF[0m Dialing peer [36maddress=[0m{"id":"21d7539792ee2e0d650b199bf742c56ae0cf499e","ip":"162.55.132.230","port":2000} [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m Starting RPC HTTP server on [::]:1317 [36mmodule=[0mapi-server
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m190.020846 [36mheight=[0m1 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"3B8A82D6E655F4E4C5F0619F2A5EDF375A4AFFB4450E17E18B4DF581FA4230EC","parts":{"hash":"0B7DD668AB50AFC2B479F9F24F9F9B3E82F073A24852CAE0550314CD5F3E32FD","total":1}},"height":1,"pol_round":-1,"round":0,"signature":"2gaVKhMZHw6OJTF75/eddQxG3jbWgZpulFixxzxspT5WW+m8MI18jGfVtDLyDqLi61kqtdizwu9b0ewlOqYhCQ==","timestamp":"2022-09-12T22:08:08.934900467Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m3B8A82D6E655F4E4C5F0619F2A5EDF375A4AFFB4450E17E18B4DF581FA4230EC [36mheight=[0m1 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m3B8A82D6E655F4E4C5F0619F2A5EDF375A4AFFB4450E17E18B4DF581FA4230EC [36mheight=[0m1 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+[90m10:08PM[0m [32mINF[0m Starting new epoch with identifier day epoch number 1 [36mmodule=[0mx/epochs
+[90m10:08PM[0m [32mINF[0m Starting new epoch with identifier week epoch number 1 [36mmodule=[0mx/epochs
+[90m10:08PM[0m [32mINF[0m Move delegation rewards to gauges
+[90m10:08PM[0m [32mINF[0m Distribute Superfluid gauges
+[90m10:08PM[0m [32mINF[0m Update all osmo equivalency multipliers
+[90m10:08PM[0m [32mINF[0m Refresh all superfluid delegation amounts
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m1 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m1 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m1 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m1 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m1 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m1 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m1 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mB7C86098F495A87867C6CFBB0543B9CF9D0C3504B82359A1C555038D244C9E79 [36mheight=[0m1 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m1 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m1 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m1 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m1 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m1 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m8CD4ECEF94844A4062ED7958D3FFE1DA4C145262C23336B13646C14E2F6B0282 [36mheight=[0m1 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m1 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m1 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m2867423FB8FE07CFA18988F1DEFF5B529A859E1CBD4CA9729EB52F784D532CFE [36mheight=[0m1 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m1 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m1 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m1 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m1 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m1 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m1 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m1 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m1 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m1 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0m90A0B4DA6D7D93545DC24D5C12DC5A74CE09AAD9916DF593F48140571067B600 [36mheight=[0m1 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0m90A0B4DA6D7D93545DC24D5C12DC5A74CE09AAD9916DF593F48140571067B600 [36mheight=[0m1 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0m90A0B4DA6D7D93545DC24D5C12DC5A74CE09AAD9916DF593F48140571067B600 [36mheight=[0m1 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m1 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m1 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m161.572883 [36mheight=[0m2 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"02A778E2385DBEF342B5F332901C3350E101DC22D52C90EF578035DC261CF41A","parts":{"hash":"87D63491D3040D1F972055E63BE2224F9DA1F159E6198150700F060087365980","total":1}},"height":2,"pol_round":-1,"round":0,"signature":"VYE9sQnS9rHEpo/c2Ybl19CUeej29bMyI4B2wPwY2qbyH1ZS/rAXwsbzls8dSHW0T7MeZKnr9iN/c9x4327lBA==","timestamp":"2022-09-12T22:08:09.198663988Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m02A778E2385DBEF342B5F332901C3350E101DC22D52C90EF578035DC261CF41A [36mheight=[0m2 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m02A778E2385DBEF342B5F332901C3350E101DC22D52C90EF578035DC261CF41A [36mheight=[0m2 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m90A0B4DA6D7D93545DC24D5C12DC5A74CE09AAD9916DF593F48140571067B600
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m2 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m2 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m2 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m514A0AA4AE16B10EA6AD23D2F45A8D345ADC29FA9BE2E6BA79A1C50636BF1F25 [36mheight=[0m2 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m2 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m2 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m2 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m2 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m2 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m2 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m2 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m2 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m2 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m2 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m2 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m2 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m2 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m2 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m2 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m92E93FE893DB2B7881191ABAD6259D3238D01B43ABBC96F359772547A0CE2293 [36mheight=[0m2 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m2 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m2 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m2 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m5382F00175D1B20BFB5B2BB8B21635BD9FD1066D7EBB672CD0225FE376F8BE93 [36mheight=[0m2 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m2 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m2 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0mB8F1933A3FBF157623146778E8609E41481E4672936F6B36A97F79478149A3F1 [36mheight=[0m2 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0mB8F1933A3FBF157623146778E8609E41481E4672936F6B36A97F79478149A3F1 [36mheight=[0m2 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0mB8F1933A3FBF157623146778E8609E41481E4672936F6B36A97F79478149A3F1 [36mheight=[0m2 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m2 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m2 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m151.650733 [36mheight=[0m3 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"70DDC2CEE0317EA971278FC9C649F422B71B2EB6F4D317C79FB982B5AA641223","parts":{"hash":"AEF260EA016940EE571AB57D008DC2DEA3AE06F3CF52ADA13F820622F34EE269","total":1}},"height":3,"pol_round":-1,"round":0,"signature":"MxwblMVU2AIlE7LFX7fFEPAYhaR+EWo4JBedhUcVoF6NF/xMT3QOMpHxYSm0/V7h09nB/THk3lYAKC2E8hKSAQ==","timestamp":"2022-09-12T22:08:09.456680771Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m70DDC2CEE0317EA971278FC9C649F422B71B2EB6F4D317C79FB982B5AA641223 [36mheight=[0m3 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m70DDC2CEE0317EA971278FC9C649F422B71B2EB6F4D317C79FB982B5AA641223 [36mheight=[0m3 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mB8F1933A3FBF157623146778E8609E41481E4672936F6B36A97F79478149A3F1
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m3 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m3 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m3 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m3 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC1D97B0BBCE8A843C0734D7E77C10FA137ADE579E7B0E1072518D160476E56A4 [36mheight=[0m3 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m3 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m3 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m3 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m3 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m3 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mEE81A7AA5CF3F164C7FBD4A58410AABC5F7DC7795A90BC40ADE1744441CEB37E [36mheight=[0m3 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m3 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m3 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF651C092BF3AD16DC5A27CA791F481FA3FED3CBD05DB8EC92B30E6BF0CFC4AD2 [36mheight=[0m3 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m3 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m3 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m3 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m3 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m3 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m3 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m3 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m3 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m3 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m3 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m3 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m3 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0mB129A5AD915716956D74A5DB7FCCC3A8B6831796AA156074374FD404DE98E5EA [36mheight=[0m3 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0mB129A5AD915716956D74A5DB7FCCC3A8B6831796AA156074374FD404DE98E5EA [36mheight=[0m3 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0mB129A5AD915716956D74A5DB7FCCC3A8B6831796AA156074374FD404DE98E5EA [36mheight=[0m3 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m3 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m3 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m152.331206 [36mheight=[0m4 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"A5F1ED8F781AC3B357D12B92BB0403390EEE1C23D2CE8307129025E51DC6E56C","parts":{"hash":"47E03E2114BEF899C441543469C82EC605F179F7A4829B6BA47351BAE90065CF","total":1}},"height":4,"pol_round":-1,"round":0,"signature":"2/ekVlPlr44/r7gI19iMygzefEOOfpACd85li0+uoiodjvkeqrzUimWLBESrjyvVreQW90M8TPCyrO/typYYBg==","timestamp":"2022-09-12T22:08:09.713479881Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0mA5F1ED8F781AC3B357D12B92BB0403390EEE1C23D2CE8307129025E51DC6E56C [36mheight=[0m4 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0mA5F1ED8F781AC3B357D12B92BB0403390EEE1C23D2CE8307129025E51DC6E56C [36mheight=[0m4 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0mB129A5AD915716956D74A5DB7FCCC3A8B6831796AA156074374FD404DE98E5EA
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m4 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m4 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m4 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m4 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m4 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m4 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m4 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m4 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m4 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m4 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m4 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m4 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m4 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m4 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE4FF154C7369C84ABA1500BB880A992D2350FE4461FEA62F07AE3BC7B3BF5650 [36mheight=[0m4 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m4 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m19F8B749CAE886D3583AF86BB08B389A78472BABF7AA6A39289A1058CE21ED03 [36mheight=[0m4 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m4 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m4 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m4 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m4 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m59B7BD9C3185E10EBD64F784231DEFBA1AE74952FA5063A0915229F2346D74B7 [36mheight=[0m4 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m4 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m4 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m4 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m4 [36mkey=[0mbank
+[90m10:08PM[0m [1m[31mERR[0m[0m Error dialing seed [36merr=[0m"dial tcp 162.55.132.230:2000: i/o timeout" [36mmodule=[0mp2p [36mseed=[0m{"id":"21d7539792ee2e0d650b199bf742c56ae0cf499e","ip":"162.55.132.230","port":2000}
+[90m10:08PM[0m [32mINF[0m Dialing peer [36maddress=[0m{"id":"6fc23ee451a5969853825d861532676b84d7bf0c","ip":"185.16.39.137","port":26716} [36mmodule=[0mp2p
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0m21E05D5DFBB7896C7692D6284E2CBE1A50BEFE731AE98CC12547C953C2E77FFA [36mheight=[0m4 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0m21E05D5DFBB7896C7692D6284E2CBE1A50BEFE731AE98CC12547C953C2E77FFA [36mheight=[0m4 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0m21E05D5DFBB7896C7692D6284E2CBE1A50BEFE731AE98CC12547C953C2E77FFA [36mheight=[0m4 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m4 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m160.822948 [36mheight=[0m5 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"449903EF2EB443522B28B80174B7654646D87F6BFC4BF317CBA82D4A64828194","parts":{"hash":"3D14DE81377DB6317509A1CFE7A5B1A9C9ABE07B8D1915C17CCFA8FE88553584","total":1}},"height":5,"pol_round":-1,"round":0,"signature":"VQdBrjFQWjJTIM1Amj1m4w8LJbPNgfzSRE2Gso3Awcb57K9D52z6/F0f2i0rIhEBA+RwzD+0NsWMfAQzai9HBQ==","timestamp":"2022-09-12T22:08:09.965783306Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m449903EF2EB443522B28B80174B7654646D87F6BFC4BF317CBA82D4A64828194 [36mheight=[0m5 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m449903EF2EB443522B28B80174B7654646D87F6BFC4BF317CBA82D4A64828194 [36mheight=[0m5 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m21E05D5DFBB7896C7692D6284E2CBE1A50BEFE731AE98CC12547C953C2E77FFA
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m5 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m5 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m5 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m5 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m5 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m5 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m5 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m5 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m5 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m5 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m5 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m5 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m99D27ED9700117E4642A23819266680043E2FD111EF291FFA719C5CE3AEE7B5A [36mheight=[0m5 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m5 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m5 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m5 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m5 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m5 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m4D0744A32DBD26CDA6214B1A6A14EDC954A4E9628F6F26C5A81C9465617B0353 [36mheight=[0m5 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m5 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m5 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE63BFA2F0EB21B6859A67E89975086C354100104A492CC256E6155E6456B1516 [36mheight=[0m5 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m5 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m5 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m5 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m5 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0m5F97763BBA290F0A9B409486D1B1D9D3EA0E83E0BCC117B46DCB8A058308ADED [36mheight=[0m5 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0m5F97763BBA290F0A9B409486D1B1D9D3EA0E83E0BCC117B46DCB8A058308ADED [36mheight=[0m5 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0m5F97763BBA290F0A9B409486D1B1D9D3EA0E83E0BCC117B46DCB8A058308ADED [36mheight=[0m5 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m5 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m5 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m154.385034 [36mheight=[0m6 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"341FC53565772247A1B5EAAA33EE96D553C5E3219CFD1BB683A9FB7F33C5A171","parts":{"hash":"49D47630D01129CD80F29D72F3DC39FFE816A7CB2960927ADAAEB54DC8347025","total":1}},"height":6,"pol_round":-1,"round":0,"signature":"fgWgjNiQO396WPRnx6SaSge9EsXM8IxDA7P/APGx4YKIanuk3i9h8JGkfblQnXwun/zGtFaKkRAS//A7uakzAA==","timestamp":"2022-09-12T22:08:10.222045583Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m341FC53565772247A1B5EAAA33EE96D553C5E3219CFD1BB683A9FB7F33C5A171 [36mheight=[0m6 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m341FC53565772247A1B5EAAA33EE96D553C5E3219CFD1BB683A9FB7F33C5A171 [36mheight=[0m6 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m5F97763BBA290F0A9B409486D1B1D9D3EA0E83E0BCC117B46DCB8A058308ADED
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m6 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m6 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m6 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m6 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m6 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m6 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m6 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m6 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m6 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m6 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m6 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m6 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m6 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m6 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m17D92A087B76B5C06AED05C3D7A41711AA7070991EA90C3FCFFAFA12C2807349 [36mheight=[0m6 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m6 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m6 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m6 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9305732376504932C5707FE773E0BBFB717026525DCE0561F3F175FA8F00076F [36mheight=[0m6 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m6 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m6 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m6 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m6 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3BC4D2DA8F7182CFEBD4848715DF3617F7F9AAB88E4C3B5963D4A1113C79D17 [36mheight=[0m6 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m6 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m6 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0m8DB1F1ED5D9F27DA4F76E46DEF32785EFD4027D17CB114BD25F9F3392AFA6489 [36mheight=[0m6 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0m8DB1F1ED5D9F27DA4F76E46DEF32785EFD4027D17CB114BD25F9F3392AFA6489 [36mheight=[0m6 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0m8DB1F1ED5D9F27DA4F76E46DEF32785EFD4027D17CB114BD25F9F3392AFA6489 [36mheight=[0m6 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m6 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m6 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m151.272584 [36mheight=[0m7 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"BFBF20D23397D82D09050367773CF8F387AE4CAFE5F580C47BA8F430C2B3086D","parts":{"hash":"F4670C5D0D703E81EAC0B5B27F50E37EE4034B79709CA58AF6F332D7E99F175F","total":1}},"height":7,"pol_round":-1,"round":0,"signature":"qtZ+nKcwXS3B1VC1nmGNrd1SVfNk3jJEZeV/9/rIRUFi6s6vVO/W1FwNgtSNRVlkS0UjwVOcrUCJfwTUjbqCBg==","timestamp":"2022-09-12T22:08:10.479787654Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0mBFBF20D23397D82D09050367773CF8F387AE4CAFE5F580C47BA8F430C2B3086D [36mheight=[0m7 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0mBFBF20D23397D82D09050367773CF8F387AE4CAFE5F580C47BA8F430C2B3086D [36mheight=[0m7 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m8DB1F1ED5D9F27DA4F76E46DEF32785EFD4027D17CB114BD25F9F3392AFA6489
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m7 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m7 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m7 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m7 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m7 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m7 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m7 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m7 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m7 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m7 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m7 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m7 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m7 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m7 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m7 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m231D599D236032E025F46BF38658B825A86B05487C71631EFDA527EA39BE95B2 [36mheight=[0m7 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m7 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m7 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m7 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m29B86411CA31033F374F2272E4ACD186F590DDA49875F12C831AD988C3BF869D [36mheight=[0m7 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m7 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m7 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m7 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m7 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mD64AB1CF2AB59241E4FFE1922076869620124748567C070BECD37F2FF5B97511 [36mheight=[0m7 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m7 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0m4CE5AACB349766F8D042F97FBA3CFF3DA4FE331A317F69E3138EC546134ECFE4 [36mheight=[0m7 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0m4CE5AACB349766F8D042F97FBA3CFF3DA4FE331A317F69E3138EC546134ECFE4 [36mheight=[0m7 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0m4CE5AACB349766F8D042F97FBA3CFF3DA4FE331A317F69E3138EC546134ECFE4 [36mheight=[0m7 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m indexed block [36mheight=[0m7 [36mmodule=[0mtxindex
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m157.922409 [36mheight=[0m8 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m1
+[90m10:08PM[0m [32mINF[0m received proposal [36mmodule=[0mconsensus [36mproposal=[0m{"Type":32,"block_id":{"hash":"5678A30F8EED382904AA1C550040417A3458F10864AFFB42C6D72A3B7AF1A4F8","parts":{"hash":"C78058B1CDB51104B3B9F5378446ECCC696243BF976A8527267381C67979A099","total":1}},"height":8,"pol_round":-1,"round":0,"signature":"FW2Dnx3ID5IQm8+hDAQ1SEY0AgKUthwBDMP209RXkH/sNreJsHWSmkps31bf8BksZ1/B2v8LgXTIBiUH1sdcBw==","timestamp":"2022-09-12T22:08:10.732616109Z"}
+[90m10:08PM[0m [32mINF[0m received complete proposal block [36mhash=[0m5678A30F8EED382904AA1C550040417A3458F10864AFFB42C6D72A3B7AF1A4F8 [36mheight=[0m8 [36mmodule=[0mconsensus
+[90m10:08PM[0m [32mINF[0m finalizing commit of block [36mhash=[0m5678A30F8EED382904AA1C550040417A3458F10864AFFB42C6D72A3B7AF1A4F8 [36mheight=[0m8 [36mmodule=[0mconsensus [36mnum_txs=[0m0 [36mroot=[0m4CE5AACB349766F8D042F97FBA3CFF3DA4FE331A317F69E3138EC546134ECFE4
+[90m10:08PM[0m [32mINF[0m executed block [36mheight=[0m8 [36mmodule=[0mstate [36mnum_invalid_txs=[0m0 [36mnum_valid_txs=[0m0
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFC68A5CBAE2520C0C9CB259354C590524B234135E75F95888FD193A8C7105122 [36mheight=[0m8 [36mkey=[0mgamm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m379646E1B21B0D39607965B0AD2371F83EECE289EB469D024DD8FFC3CFBB0CD0 [36mheight=[0m8 [36mkey=[0mcapability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mBBBC99B9FBC70066F2B93C174BC42594733628B92631886A78D6EE6DE44DCCB8 [36mheight=[0m8 [36mkey=[0mtxfees
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAB55D4223E49E9ACEA2940A1756299046D7272F5730AADC2237E45CBEB537574 [36mheight=[0m8 [36mkey=[0mincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF1FAF66922A3F9DA7DCCFAF10353B8443C5F389FDED00A7520060B7313CE7B3A [36mheight=[0m8 [36mkey=[0mmint
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mFDDDE9D176564F0AA97EDC639027F470118DD49393A7D88A8229AC0625CD6918 [36mheight=[0m8 [36mkey=[0mupgrade
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m8 [36mkey=[0micahost
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m259ACE33F3D819FD9CC751968CC83D503A92E8A7E6FD5E3298068249565FD706 [36mheight=[0m8 [36mkey=[0mtransfer
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m67E2CACE38EFEE5C6E56D22D2D002B08A71CE753263902E92CFE84AE35296BEF [36mheight=[0m8 [36mkey=[0mlockup
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC8FA0E1F51D9C05935576DE03845734959320B677397591272507724B054E092 [36mheight=[0m8 [36mkey=[0mpoolincentives
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mB2422ACDDDD125434050558F3A628759C24ECF049BA3B4C1316EE69281231B47 [36mheight=[0m8 [36mkey=[0mslashing
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m8 [36mkey=[0mauthz
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m8 [36mkey=[0mevidence
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m606F7FCB07575B3CEF7F86904A4F4C74D129B93807857A427DB165F9B5543718 [36mheight=[0m8 [36mkey=[0mepochs
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m8 [36mkey=[0msuperfluid
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mE3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855 [36mheight=[0m8 [36mkey=[0mtokenfactory
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mAFC552F842067413AB27A20E3675FC22D193E6428C7B379252E506431D44B60D [36mheight=[0m8 [36mkey=[0mdistribution
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m386C519804AD7C7F990913AD0230BB2450D8AEFF5BC621C7E4CC8A26C9B38119 [36mheight=[0m8 [36mkey=[0mparams
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m60CD137C1962ECAC616389D68034833F2921509C2D285AA5F5153997CE968A74 [36mheight=[0m8 [36mkey=[0mgov
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m8828BECE8C3DB8B22D03B4BD9B3306AB83EA96FCC26102762EA2A8CD2295D3F2 [36mheight=[0m8 [36mkey=[0mstaking
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m9E773BB59E15FF7A6E29C9D4A59FD0946B29514468C7C4EBAA1E85A0E6C8A12F [36mheight=[0m8 [36mkey=[0macc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC9E47F884E439A9CC875D02EDC0E3D0D5E9A67E41E7B9CFE037A7E2173936D0B [36mheight=[0m8 [36mkey=[0mbech32ibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mmem_capability
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m41831D0BCE680D87D344A274826C4D949F870BC9275EC62B9EAB79EC1253F2F1 [36mheight=[0m8 [36mkey=[0mwasm
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0m [36mheight=[0m0 [36mkey=[0mtransient_params
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mC617EEF82D350859FC4C1B0118079FAD20ECD1E5FE2294C86A86E94C0D14CA55 [36mheight=[0m8 [36mkey=[0mibc
+[90m10:08PM[0m [32mINF[0m committed KVStore [36mcommit_store_hash=[0mF0589163E4E8FF9754C85679EDA2E691C18009F32C7BA2FDC205234F9CAF8AE8 [36mheight=[0m8 [36mkey=[0mbank
+[90m10:08PM[0m [32mINF[0m calculated commit hash [36mcommit_hash=[0mE86F6992C91A5AF65319E157FD64F853D5200BF1EC106D306A8388073E21B1D5 [36mheight=[0m8 [36mkeys=[0m["acc","authz","bank","bech32ibc","capability","distribution","epochs","evidence","gamm","gov","ibc","icahost","incentives","lockup","mem_capability","mint","params","poolincentives","slashing","staking","superfluid","tokenfactory","transfer","txfees","upgrade","wasm"]
+[90m10:08PM[0m [32mINF[0m committed ABCI [36mcommit_hash=[0mE86F6992C91A5AF65319E157FD64F853D5200BF1EC106D306A8388073E21B1D5 [36mheight=[0m8 [36mretain_height=[0m0
+[90m10:08PM[0m [32mINF[0m committed state [36mapp_hash=[0mE86F6992C91A5AF65319E157FD64F853D5200BF1EC106D306A8388073E21B1D5 [36mheight=[0m8 [36mmodule=[0mstate [36mnum_txs=[0m0
+[90m10:08PM[0m [32mINF[0m Timed out [36mdur=[0m100 [36mheight=[0m8 [36mmodule=[0mconsensus [36mround=[0m0 [36mstep=[0m3

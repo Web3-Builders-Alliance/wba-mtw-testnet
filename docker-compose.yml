@@ -3,7 +3,7 @@ version: "3"
 services:
   wbanode1:
     container_name: wbanode1
-    image: "wba-chain"
+    image: "wba-chain:latest"
     # build: .
     environment:
       - DEBUG=1
@@ -21,14 +21,14 @@ services:
       - "8080:8080"
     volumes:      
       - ./docker/.testnets/v1:/root/.wbad/:rw      
-    command: wbad start --home /root/.wbad/ --moniker wbanode1 --p2p.persistent_peers "c209ee97b631df98923cadd9667bd61d879e2e1a@evenode2:26666"    
+    command: wbad start --home /root/.wbad/ --moniker wbanode1 --p2p.persistent_peers "97c243ce12df828f9e321f33dc36d2639a912913@wbanode2:26666"
     networks:
       localnet:
-        ipv4_address: 192.168.11.2
+        ipv4_address: 192.168.12.2
 
   wbanode2:
     container_name: wbanode2
-    image: "wba-chain"
+    image: "wba-chain:latest"
     # build: .
     environment:
       - DEBUG=1
@@ -46,11 +46,11 @@ services:
       - "9100:9100"        
     volumes:      
       - ./docker/.testnets/v2:/root/.wbad/:rw 
-    command: wbad start --home /root/.wbad/ --moniker wbanode2 --address "tcp://evenode2:26668" --grpc-web.address "evenode2:9101" --grpc.address "evenode2:9100" --p2p.laddr "tcp://evenode2:26666" --rpc.laddr "tcp://evenode2:26667" --proxy_app "tcp://evenode2:26668" --p2p.persistent_peers "c209ee97b631df98923cadd9667bd61d879e2e1a@evenode1:26656" # --api.address "tcp://0.0.0.0:1327"
+    command: wbad start --home /root/.wbad/ --moniker wbanode2 --address "tcp://wbanode2:26668" --grpc-web.address "wbanode2:9101" --grpc.address "wbanode2:9100" --p2p.laddr "tcp://wbanode2:26666" --rpc.laddr "tcp://wbanode2:26667" --proxy_app "tcp://wbanode2:26668" --p2p.persistent_peers "bc81ba1eaae5cb4f80e1d18fa0a5e79e99488ffd@wbanode1:26656" # --api.address "tcp://0.0.0.0:1327"
     # command: ls /root/.wbad/config
     networks:
       localnet:
-        ipv4_address: 192.168.11.3
+        ipv4_address: 192.168.12.3
 
 networks:
   localnet:
@@ -58,5 +58,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.11.0/25
-          gateway: 192.168.11.1
+        - subnet: 192.168.12.0/25
+          gateway: 192.168.12.1
