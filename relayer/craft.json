@@ -1,0 +1,16 @@
+{
+    "type": "cosmos",
+    "value": {
+        "key": "relayer",
+        "chain-id": "craFT-V5",
+        "rpc-addr": "https://craft-rpc.crafteconomy.io",
+        "account-prefix": "craft",
+        "keyring-backend": "test",
+        "gas-adjustment": 1.2,
+        "gas-prices": "0.025ucraft",
+        "debug": true,
+        "timeout": "20s",
+        "output-format": "json",
+        "sign-mode": "direct"
+    }
+}

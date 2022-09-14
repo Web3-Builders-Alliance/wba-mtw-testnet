@@ -53,6 +53,7 @@ from_scratch () {
   # Allocate genesis accounts, first is validator  
   wbad add-genesis-account $KEY 1000000000uwba --keyring-backend $KEYRING
   wbad add-genesis-account $KEY2 100000000uwba,100uowba2token --keyring-backend $KEYRING  
+  wbad add-genesis-account wba1lwwr2junyeej0mts25rmjshqw2cw8w6604mfsk 100000000uwba --keyring-backend $KEYRING   # rly
 
   # give relayer some tokens
   wbad add-genesis-account wba1lwwr2junyeej0mts25rmjshqw2cw8w6604mfsk 1000000000uwba --keyring-backend $KEYRING  
