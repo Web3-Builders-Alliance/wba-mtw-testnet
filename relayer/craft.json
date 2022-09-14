@@ -3,7 +3,7 @@
     "value": {
         "key": "relayer",
         "chain-id": "craFT-V5",
-        "rpc-addr": "https://craft-rpc.crafteconomy.io",
+        "rpc-addr": "https://craft-rpc.crafteconomy.io:443",
         "account-prefix": "craft",
         "keyring-backend": "test",
         "gas-adjustment": 1.2,
