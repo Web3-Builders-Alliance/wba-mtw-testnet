@@ -2,7 +2,7 @@
     "type": "cosmos",
     "value": {
         "key": "relayer",
-        "chain-id": "craFT-V5",
+        "chain-id": "craft-v5",
         "rpc-addr": "https://craft-rpc.crafteconomy.io:443",
         "account-prefix": "craft",
         "keyring-backend": "test",
